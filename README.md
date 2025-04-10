@@ -1,0 +1,1 @@
+# CodeforcesのAPIを叩いてICPC resolverに対応したeventfeedを出力します。
