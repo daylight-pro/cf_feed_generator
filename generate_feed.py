@@ -399,6 +399,8 @@ for status in data["result"]:
     if status_data.verdict == Verdict.AC:
         if status_data.problem.index in solved:
             continue
+        if status_data.relativeTimeSeconds > contest.durationSeconds - contest.freezeDurationSeconds:
+            continue
         solved.add(status_data.problem.index)
         if status_data.author.getId() not in FA.keys():
             FA[status_data.author.getId()] = list()
